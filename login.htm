@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+</head>
+<body>
+    <input type="radio" id="loginFormToggle" name="formToggle" checked>
+    <input type="radio" id="registerFormToggle" name="formToggle">
+    <input type="radio" id="forgotFormToggle" name="formToggle">
+
+    <!-- Login -->
+    <div class="container" id="loginForm">
+        <form id="loginFormulario" action="">
+            <h1>Login</h1>
+            <div class="caixa-input">
+                <input id="email" placeholder="Vanguard@gmail.com" type="email" required name="email">
+            </div>
+            <div class="caixa-input">
+                <input id="senha" placeholder="vanguard123" type="password" required name="senha">
+            </div>
+            <div class="caixa-check">
+                <label><input type="checkbox">Lembrar de mim</label>
+                <label for="forgotFormToggle">Esqueceu a Senha</label>
+            </div>
+            <div class="botao">
+                <button type="submit" class="btn">Login</button>
+            </div>
+            <div class="link">
+                <p>Não Possui conta? <label for="registerFormToggle">Registre-se</label></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Registro -->
+    <div class="container" id="registerForm">
+        <form action="">
+            <h1>Registre-se</h1>
+            <div class="caixa-input">
+                <input placeholder="Nome" type="text" required name="nome" maxlength="15">
+            </div>
+            <div class="caixa-input">
+                <input placeholder="Vanguard@gmail.com" type="email" required name="email">
+            </div>
+            <div class="caixa-input">
+                <input placeholder="vanguard123" type="password" required name="senha">
+            </div>
+            <div class="caixa-check1">
+                <label><input type="checkbox" required>Concordo com os termos e condições</label>
+            </div>
+            <div id="botao1">
+                <button type="submit" class="btn">Registrar</button>
+            </div>
+            <div class="link">
+                <p>Já tem uma conta? <label for="loginFormToggle">Login</label></p>
+            </div>
+        </form>
+    </div>
+
+    <!-- Esqueceu a senha -->
+    <div class="container" id="forgotForm">
+        <form action="">
+            <h1>Trocar senha</h1>
+            <div class="caixa-input">
+                <input placeholder="Vanguard@gmail.com" type="email" required name="email">
+            </div>
+            <div class="botao">
+                <button type="submit" class="btn">Enviar</button>
+            </div>
+            <div class="link">
+                <p>Não Possui conta? <label for="registerFormToggle">Registre-se</label></p>
+            </div>
+        </form>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

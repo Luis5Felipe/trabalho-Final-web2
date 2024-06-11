@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Jost&family=Poppins&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <p id="frete">Frente grátis a partir de R$900</p>
+        <nav class="menu">
+            <img src="menu/logo.svg" alt="logo" id="logo" /><!--logo-->
+            <!--barra de pesuisa-->
+            <div class="pesquisa-btn">
+                <input type="text" id="lupa" class="search-text" name="Buscar" onkeyup="pesquisa()" placeholder="Buscar produtos?"> <!-- Adicionar () na função pesquisa -->
+                <label for="lupa">
+                    <img src="menu/lupa.svg" alt="lupa" id="search-button" />
+                </label>
+            </div><!--fina barrada de pesquisa-->
+            <!--login-->
+            <div id="login">
+                <label for="logar">
+                    <img src="menu/user.png" alt="login">
+                </label>
+                <a id="logar" href="login.htm">Deslogar</a>
+            </div>
+            <!--fina login-->
+            <!--favoristos-->
+            <div class="favor-openner"><span>0</span>♡</div>
+            <!--final Favoritos-->
+            <!--Carrinho-->
+            <div class="menu-openner"><span>0</span>🛒</div>
+            <!--final carrinho-->
+            <!--opções do menu-->
+            <div class="itens-menu">
+                <a href="#" data-category="hardware">Hardware</a>
+                <a href="#" data-category="acessorios">Acessórios</a>
+                <a href="#" data-category="ofertas">Ofertas do dia</a>
+                <a href="#" data-category="games">Games</a>
+            </div><!--final da opções do menu-->
+        </nav>
+    </header><!--final do cabeçalho-->
+    <!--Carrosell principal-->
+    <div class="carrosel">
+        <div class="conteiner" id="imagem">
+            <img src="carrosel-principal/banneer(1).jpg" alt="carrosel De promoção">
+            <img src="carrosel-principal/banneer(2).jpg" alt="carrosel De promoção">
+            <img src="carrosel-principal/banneer(3).jpg" alt="carrosel De promoção">
+            <img src="carrosel-principal/banneer(4).jpg" alt="carrosel De promoção">
+        </div>
+    </div>
+    <!--Final carrossel principal-->
+    <!--aside carrinho-->
+    <aside id="carrinho" class="carrinho">
+        <h2>Minhas compras</h2>
+        <div id="itens-carrinho">
+            <p>Seu carrinho está vazio.</p>
+        </div>
+        <div class="total">
+            <p>Total: R$ <span id="total-preco">0.00</span></p>
+        </div>
+        <button id="finalizar-compra">Finalizar Compra</button>
+    </aside>
+    <!--aside final-->
+    <!--aside favoridos-->
+    <aside id="favoritos" class="favoritos">
+        <h2>Meus Favoritos</h2>
+        <div id="itens-favoritos" class="itens-favoritos">
+            <p>Você não possui favoritos.</p>
+        </div>
+        <button id="limpar-favoritos">Limpar Tudo</button>
+    </aside>
+    <!--aside final-->
+    <!--Produtos Mais vendidos-->
+    <div class="linha-produtos"></div>
+    <selection class="conteiner-itens">
+        <div class="caixa-branca">
+            <div class="itens">
+                <div class="item videogame">
+                    <div class="produtos">
+                        <img src="Produtos/1.png" alt="xbox series S">
+                    </div>
+                    <h3>Xbox Series S</h3>
+                    <span>R$ 2500,90</span>
+                    <button class="comprar">Comprar</button>
+                    <button class="favoritos-openner">♡</button>
+                </div>
+                <div class="item videogame ofertas">
+                    <div class="produtos sale">
+                        <img src="Produtos/2.png" alt="xbox series S">
+                        <div class="sell">
+                            PROMOÇÃO
+                        </div>
+                    </div>
+                    <h3>Plastation 5</h3>
+                    <span>R$ 3000,99</span>
+                    <button class="comprar">Comprar</button>
+                    <button class="favoritos-openner">♡</button>
+                </div>
+                <div class="item acessorios">
+                    <div class="produtos">
+                        <img src="Produtos/3.png" alt="xbox series S">
+                    </div>
+                    <h3>Controle Xbox</h3>
+                    <span>R$ 450,90</span>
+                    <button class="comprar">Comprar</button>
+                    <button class="favoritos-openner">♡</button>
+                </div>
+                <div class="item acessorios">
+                    <div class="produtos">
+                        <img src="Produtos/4.png" alt="xbox series S">
+                    </div>
+                    <h3>Dualsense</h3>
+                    <span>R$ 500,90</span>
+                    <button class="comprar">Comprar</button>
+                    <button class="favoritos-openner">♡</button>
+                </div>
+                <div class="item videogame">
+                    <div class="produtos">
+                        <img src="Produtos/5.png" alt="xbox series S">
+                    </div>
+                    <h3>Xbox Series X</h3>
+                    <span>R$ 3500,90</span>
+                    <button class="comprar">Comprar</button>
+                    <button class="favoritos-openner">♡</button>
+                </div>
+                <div class="item hardware">
+                    <div class="produtos">
+                        <img src="Produtos/placamae.jpeg" alt="xbox series S">
+                    </div>
+                    <h3>Placa-Mãe Asus</h3>
+                    <span>R$ 650,99</span>
+                    <button class="comprar">Comprar</button>
+                    <button class="favoritos-openner">♡</button>
+                </div>
+                <div class="item games">
+                    <div class="produtos">
+                        <img src="Produtos/takken.jpeg" alt="xbox series S">
+                    </div>
+                    <h3>Takken</h3>
+                    <span>R$ 500</span>
+                    <button class="comprar">Comprar</button>
+                    <button class="favoritos-openner">♡</button>
+                </div>
+                <div class="item games ofertas">
+                    <div class="produtos sale">
+                        <img src="Produtos/tomb.jpeg" alt="xbox series S">
+                        <div class="sell">
+                            PROMOÇÃO
+                        </div>
+                    </div>
+                    <h3>Tomb Raider</h3>
+                    <span>R$ 250,99</span>
+                    <button class="comprar">Comprar</button>
+                    <button class="favoritos-openner">♡</button>
+                </div>
+                <div class="item acessorios ofertas">
+                    <div class="produtos sale">
+                        <img src="Produtos/mousegamer.jpeg" alt="xbox series S">
+                        <div class="sell">
+                            PROMOÇÃO
+                        </div>
+                    </div>
+                    <h3>Mouse Gamer</h3>
+                    <span>R$ 700,99</span>
+                    <button class="comprar">Comprar</button>
+                    <button class="favoritos-openner">♡</button>
+                </div>
+                <div class="item hardware">
+                    <div class="produtos">
+                        <img src="Produtos/placamae(2).jpeg" alt="xbox series S">
+                    </div>
+                    <h3>Placa-Mãe Gigabyte</h3>
+                    <span>R$ 349,99</span>
+                    <button class="comprar">Comprar</button>
+                    <button class="favoritos-openner">♡</button>
+                </div>
+                
+            </div>
+        </div>
+    </selection>
+    <!--informações-->
+    <section class="itens-info">
+        <div class="info">
+            <img src="footer/caminhao-de-entrega-4.png (1).webp" alt="caminhão">
+            <h3>RECEBA EM CASA</h3>
+            <p>Enviamos para todo Brasil</p>
+        </div>
+        <div class="info">
+            <img src="footer/devolucoes-1.png.webp" alt="troca e devolução">
+            <h3>TROCA E DEVOLUÇÃO</h3>
+            <p>7 dias após o recebimento</p>
+        </div>
+        <div class="info">
+            <img src="footer/cartoes-de-credito-1.png.webp" alt="cartão parcelamento">
+            <h3>PARCELE EM ATÉ</h3>
+            <p>12x Com cartões de crédito</p>
+        </div>
+        <div class="info">
+            <img src="footer/cadeado-1.png.webp" alt="segurança">
+            <h3>SITE 100% SEGURO</h3>
+            <p>Seus dados estão protegidos</p>
+        </div>
+    </section>
+    <!--rodapé-->
+    <footer class="rodape">
+        <div class="inst">
+            <ul>
+                <h3>INSTITUCIONAL</h3>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre Nós</a></li>
+                <li><a href="#">Todos os Produtos</a></li>
+            </ul>
+        </div>
+        <div class="ajuda">
+            <h3>Ajuda</h3>
+            <ul>
+                <li><a href="#">Politica de Privacidade</a></li>
+                <li><a href="#">Politica de Devolução e Trocas</a></li>
+                <li><a href="#">Rastreamento de Pedidos</a></li>
+            </ul>
+            <div class="contato">
+                <p><span>✉</span>angard@contato.com.br</p>
+                <p><span>✆</span>(34) 9 0000 0000</p>
+            </div>
+        </div>
+        <div class="pagamento">
+            <h3>FORMAS DE PAGAMENTO</h3>
+            <img src="footer/formas.webp" alt="FORMAS DE PAGAMENTO">
+            <img src="footer/selossl.webp" alt="selos">
+        </div>
+        <div class="rede">
+            <h3>Nossas Redes</h3>
+            <img src="icons/icons8-facebook-50.png" alt="faceboot">
+            <img src="icons/icons8-instagram-50.png" alt="instagram">
+            <img src="icons/icons8-twitter-50.png" alt="twitter">
+            <img src="icons/icons8-tiktok-50.png" alt="tiktok">
+        </div>
+    </footer>
+    <div class="cpj">
+        <p>Vanguard tec store © 2024 Todos os direitos reservados.</p>
+        <p>CNPJ: 00000000000/00</p>
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
