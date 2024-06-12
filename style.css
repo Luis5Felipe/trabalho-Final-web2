@@ -32,7 +32,6 @@ body {
 .menu {
     background-color: var(--CorConteineres);
     display: flex;
-    justify-content: center;
     align-items: center;
     text-align: center;
     width: 100%;
@@ -348,13 +347,6 @@ body {
     height: 100%;
 }
 
-@media screen and (max-width: 768px) {
-    .carrosel {
-        max-height: 450px; /
-    }
-}
-
-
 /*Produtos mais vendidos*/
 /*estilização do hr*/
 .linha-produtos {
@@ -575,4 +567,15 @@ body {
     color: var(--CorTexto);
     font-size: var(--textoTamanho);
     text-align: center;
+}
+
+@media (min-width: 901px) and (max-width: 2000px) {
+    .carrosel {
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+        max-height: 800px;
+        position: relative;
+    }
+
 }
